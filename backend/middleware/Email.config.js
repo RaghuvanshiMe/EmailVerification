@@ -6,10 +6,7 @@ export const transporter = nodemailer.createTransport({
   secure: false,
   auth: {
     user: "mihirsingh8383@gmail.com",
-    pass: "ylaq cebh tgft smpz", 
-  },
-  tls: {
-    rejectUnauthorized: false,  
+    pass: "ylaqcebhtgftsmpz", 
   },
 });
 
@@ -30,3 +27,4 @@ const SendEmail = async () => {
 };
 
 SendEmail();
+
