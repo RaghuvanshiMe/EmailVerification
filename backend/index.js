@@ -11,16 +11,24 @@ const PORT = process.env.PORT || 8000
 const app = express()
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [
+        "http://localhost:5173",
+        "https://email-verification-lyart-iota.vercel.app"
+    ],
     methods: ["GET", "POST"],
     credentials: true
 }));
+
 
 app.use(express.json())
 
 app.use('/auth', AuthRoutes)
 
+app.get("/", (req, res) => {
+    res.send("Backend is running ✔️");
+});
 
 app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}`)
 })
+
