@@ -13,7 +13,8 @@ const app = express()
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://emailverificationnn.onrender.com/"
+        "https://emailverificationnn.onrender.com",
+        "https://emailverification-1-61rj.onrender.com"
     ],
     methods: ["GET", "POST"],
     credentials: true
@@ -31,5 +32,6 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}`)
 })
+
 
 
