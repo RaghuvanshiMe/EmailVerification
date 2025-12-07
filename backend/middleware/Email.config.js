@@ -22,11 +22,7 @@ const SendEmail = async () => {
       html: "<b>Hello world?</b>",
     });
 
-    const info = await transporter.sendMail(mailOptions);
-
-    console.log("📧 Email Sent Successfully!");
-    console.log("Message ID:", info.messageId);
-    console.log("Response:", info.response);
+    console.log(info);
   } catch (error) {
     console.error("❌ Email Sending Failed!");
     console.error(error);
@@ -34,5 +30,6 @@ const SendEmail = async () => {
 };
 
 SendEmail();
+
 
 
