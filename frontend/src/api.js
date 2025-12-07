@@ -1,4 +1,4 @@
-const API = "emailotpv-production.up.railway.app"; 
+const API = "https://emailotpv-production.up.railway.app/"; 
 
 export const sendOTP = async (name, email, password) => {
   const res = await fetch(`${API}/register`, {
@@ -18,6 +18,7 @@ export const verifyOTP = async (email, otp) => {
   });
   return res.json();
 };
+
 
 
 
