@@ -13,7 +13,7 @@ const app = express()
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://email-verification-lyart-iota.vercel.app"
+        "https://emailverificationnn.onrender.com/"
     ],
     methods: ["GET", "POST"],
     credentials: true
@@ -31,4 +31,5 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}`)
 })
+
 
